@@ -1,0 +1,236 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* General Styles */
+  body {
+    font-family: 'Pacifico', cursive, sans-serif;
+    transition: background 0.3s ease;
+    background-color: #f9f9f9;
+  }
+  
+  header {
+    background-color: hsl(210, 100%, 30%);
+    color: #fff;
+    padding: 20px 30px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* اضافه کردن سایه */
+  }
+  
+  #site-title {
+    font-size: 60px;
+    color: hsl(210, 100%, 70%);
+    font-family: 'Amatic SC', cursive;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* سایه برای متن */
+  }
+  
+  
+  .header-controls {
+    display: flex;
+    gap: 10px;
+    position: absolute;
+    right: 20px;
+  }
+  
+  .cute-btn {
+    border: none;
+    background: #d1e1ff;
+    color: #333;
+    font-size: 20px;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .cute-btn:hover {
+    transform: scale(1.2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* استایل container فولدرها برای اسکرول افقی */
+  .folders-container {
+    display: flex;
+    overflow-x: auto; /* اسکرول افقی */
+    gap: 20px;
+    padding: 20px;
+    white-space: nowrap; /* جلوگیری از شکست خط */
+  }
+  
+  .folder {
+    width: 350px;
+    background: #f4f4f4;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    margin: 20px;
+    display: inline-block; /* فولدرها به صورت افقی کنار هم قرار می‌گیرند */
+  }
+  
+  .folder:hover {
+    transform: translateY(-10px);
+  }
+  
+  .folder h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .folder img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease, filter 0.3s ease;
+  }
+  
+  .folder img:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+  }
+  
+  .folder .add-img-btn {
+    background: #ffffff;
+    color: rgb(0, 0, 0);
+    font-size: 30px;
+    border-radius: 50%;
+    padding: 15px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    border: none;
+  }
+  
+  .folder .add-img-btn:hover {
+    transform: scale(1.1);
+  }
+  
+  .folder .change-theme-btn {
+    background: #ffffff;
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+  }
+  
+  .folder .change-theme-btn:hover {
+    transform: scale(1.1);
+  }
+  
+  .folder .delete-btn {
+    background: #000000;
+    color: white;
+    font-size: 16px;
+    border-radius: 50%;
+    padding: 8px;
+    cursor: pointer;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+  }
+  
+  .folder .delete-btn:hover {
+    transform: scale(1.1);
+  }
+  
+  .folder .delete-img-btn {
+    background: #030000;
+    color: white;
+    font-size: 16px;
+    border-radius: 50%;
+    padding: 5px;
+    cursor: pointer;
+    margin-top: 5px;
+  }
+  
+  .folder .delete-img-btn:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Themes for Folders */
+  .folder.theme-navy-cream {
+    background: linear-gradient(to right, #f7c6d7, #a6c8f1, #b5e8b0, #f9f4b7);
+    color: #f8f1e5;
+  }
+  
+  .folder.theme-red-white {
+    background: linear-gradient(to right, #b5e8b0, #f9f4b7);
+    color: #ffffff;
+  }
+  
+  .folder.theme-yellow-orange {
+    background: linear-gradient(135deg, #ffdc00, #ff851b);
+    color: #000000;
+  }
+  
+  .folder.theme-green-cream {
+    background: linear-gradient(to bottom, #f7c6d7, #a6c8f1);
+    color: #f8f1e5;
+  }
+  
+  .folder.theme-colorful {
+    background: linear-gradient(135deg, #f39c12, #8e44ad, #3498db);
+    color: #ffffff;
+  }
+  
+  .folder.theme-black-white {
+    background:  linear-gradient(45deg, #f6b0a1, #f9f4b7);
+    color: #ffffff;
+  }
+  
+  .folder.theme-gray-burgundy {
+    background: linear-gradient(135deg, #a6c8f1, #f1d1b5);
+    color: #ffffff;
+  }
+  
+  /* Lightbox */
+  #lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.8);
+  }
+  
+  #lightbox img {
+    max-width: 90%;
+    max-height: 70%;
+  }
+  
+  #lightbox-caption {
+    color: #ffffff;
+    margin-top: 10px;
+    font-size: 18px;
+    text-align: center;
+  }
+  
+  #lightbox.hidden {
+    display: none;
+  }
+  
+  #close-lightbox {
+    margin-top: 20px;
+    padding: 10px;
+    background: #ffffff;
+    border: none;
+    cursor: pointer;
+  }
+  

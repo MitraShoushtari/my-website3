@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stylish Image Gallery</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1 id="site-title"> Stylish Image Gallery </h1>
+    <div class="header-controls">
+      <button id="add-folder-btn" class="cute-btn">📁+</button>
+      <button id="change-bg-btn" class="cute-btn">🌄</button>
+    </div>
+  </header>
+  <main class="folders-container" id="folders-container">
+    <!-- فولدرها داینامیک اضافه می‌شوند -->
+  </main>
+
+  <div id="lightbox" class="hidden">
+    <img id="lightbox-img" src="" alt="Large View">
+    <p id="lightbox-caption"></p>
+    <button id="close-lightbox">Close</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
